@@ -1,0 +1,176 @@
+/* Auto-DarkMode
+@media (prefers-color-scheme: dark) {
+    :root {
+      --text: White;
+      --bg: rgb(22, 22, 22);
+    }
+} */
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    height: 100vh;
+    background-color: var(--bg);
+    color: var(--text);
+
+    animation: PagefadeInAnimation ease 3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    
+}
+
+
+@keyframes PagefadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+
+
+/* Home Page - Title & Animation */
+h1.Home-Page-Title {
+    /*
+    display: flex;  
+    justify-content: center;
+    align-items: center;
+    background-color: pink;*/
+    position: relative;
+    font-size: 100px;
+    color: rgb(0, 255, 195);
+    color: var(--text);
+    -webkit-text-stroke: 0.0vw rgb(0, 255, 195);
+    font-family: Montserrat-Bold; 
+    text-transform: uppercase;
+}
+
+h1 a:link { text-decoration: none;}
+h1 a:hover { text-decoration: none; }
+h1 a:active { text-decoration: none; }
+h1 a:visited {  /*color:rgb(0, 255, 195)*/
+    color: var(--text);
+}
+
+h1.Home-Page-Title::before {
+/*
+    display: flex;
+  justify-content: center;
+    align-items: center; */
+    content: attr(data-text);
+    
+    top: 0;
+    left: 0;
+    width: 0;
+    position: absolute;
+    -webkit-text-stroke: 0vw rgb(219, 211, 211);
+    color: rgb(18, 137, 110);
+    border-right: 6px solid rgb(23, 195, 143);
+    overflow: hidden;
+    
+    animation: animate 2.5s  ease-in forwards;
+    animation-iteration-count: 1;
+   
+
+}
+
+@keyframes animate {
+
+    0%, 10%, 100% {
+        opacity: 0%;
+        width: 0;
+
+    }
+
+    20% {
+        opacity: 50%;
+      /*  width: 100%;*/
+
+
+    }
+
+    40% {
+        opacity: 70%;
+      /*  width: 100%;*/
+
+
+    }
+
+   50%, 70%, 90% {
+        opacity: 100%;
+        width: 100%;
+    }
+
+
+}
+@keyframes txop {
+
+    0%, 10%, 100% {
+        opacity: 0%;
+        
+
+    }
+
+    20% {
+        opacity: 50%;
+      /*  width: 100%;*/
+
+
+    }
+
+    40% {
+        opacity: 70%;
+      /*  width: 100%;*/
+
+
+    }
+
+   50%, 70%, 90% {
+        opacity: 100%;
+        
+    }
+
+
+}
+/**/
+
+
+.intro-button {
+    width: fit-content;
+    height: fit-content;   
+    background-color: rgb(97, 221, 179)!important; 
+    outline: none !important; 
+    box-shadow:none !important; 
+    color: white !important;
+    /*--bs-btn-border-width: 0px !important;*/
+    --bs-btn-border-color: none !important; /*removes white outline from bootsrap buttons*/
+    --bs-btn-padding-y: 0.575rem !important;
+    transition: transform 1s;
+
+}
+
+
+.intro-button:hover {
+    background-color: rgb(58, 178, 138)!important; 
+    outline: none !important; 
+    transform: scale(1.1); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+
+}
+/*
+.intro-button:focus,.intro-button:active:focus,.intro-button.active:focus,
+.intro-button.focus,.intro-button:active.focus,.intro-button.active.focus {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.intro-button:not(:disabled):not(.disabled):active:focus,
+.intro-button:not(:disabled):not(.disabled).active:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}*/
+

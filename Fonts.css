@@ -1,0 +1,24 @@
+@font-face {
+    font-family: shadows-regular;
+    src: url('Fonts/ShadowsIntoLight-Regular.ttf');
+}
+@font-face {
+    font-family: ArchitectsDaughter-Regular;
+    src: url('Fonts/ArchitectsDaughter-Regular.ttf');
+}
+@font-face {
+    font-family: PermanentMarker-Regular;
+    src: url('Fonts/PermanentMarker-Regular.ttf');
+}
+@font-face {
+    font-family: "Montserrat-Regular";
+    src: url('Fonts/Montserrat-Regular.ttf');
+}
+@font-face {
+    font-family: "Montserrat-Bold";
+    src: url('Fonts/Montserrat-Bold.ttf');
+}
+@font-face {
+    font-family: "Consolas";
+    src: url('Fonts/Consolas.ttf');
+}
